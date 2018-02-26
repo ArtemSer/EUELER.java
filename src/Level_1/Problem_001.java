@@ -4,7 +4,7 @@ package Level_1;
  *              we get 3, 5, 6 and 9. The sum of these multiples is 23.
  * Mission:     Find the sum of all the multiples of 3 or 5 below 1000.
  *
- * Author:      Sierikov Artem  ()
+ * Author:      Sierikov Artem  (https://github.com/ArtemSer)
  */
 public class Problem_001 {
     public static void main(String[] args) {
