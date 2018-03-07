@@ -17,17 +17,17 @@ package Level_1;
  * Author:      Sierikov Artem  (https://github.com/ArtemSer)
  */
 public class Problem_012 {
-    private static int checkAmountOfDivisors(int number){
-        int amountDivisors = 0;
-        for (int i = 1; i <= number; i++)
-            if (number % i == 0)
-                amountDivisors++;
-        return amountDivisors;
+    private static int checkAmountOfDivisors(int numberToCheck){
+        int divisorsCount = 2;
+        for(int i = 2;i <= Math.sqrt(numberToCheck); ++i)
+            if (numberToCheck % i == 0)
+                divisorsCount += (numberToCheck / i == i)? 1:2;
+        return divisorsCount;
     }
     public static void main(String[] args) {
         int temp = 0;
         for (int number = 0, add = 1; temp < 500; add++){
-            number+=add;
+            number += add;
             temp = checkAmountOfDivisors(number);
             System.out.println(number + " divisors: " + temp);
             if (temp > 500) System.out.println("FOUND : ");

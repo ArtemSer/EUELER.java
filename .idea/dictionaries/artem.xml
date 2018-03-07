@@ -2,6 +2,7 @@
   <dictionary name="artem">
     <words>
       <w>artem</w>
+      <w>collatz</w>
       <w>primefactor</w>
       <w>sierikov</w>
       <w>submass</w>
