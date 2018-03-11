@@ -1,7 +1,3 @@
-package Level_1;
-
-import java.util.LinkedList;
-
 /*
  * Description: The following iterative sequence is defined for the set of positive integers:
  *                               n → n/2 (n is even)
@@ -16,6 +12,10 @@ import java.util.LinkedList;
  *
  * Author:      Sierikov Artem  (https://github.com/ArtemSer)
  */
+package Level_1;
+
+import java.util.LinkedList;
+
 public class Problem_014 {
     public static void main(String[] args) {
         long timeBegin = System.currentTimeMillis();
@@ -25,20 +25,19 @@ public class Problem_014 {
         int result = 0;
         long amount = 0;
 
-        for(int num = 13; num < 1_000_000; num++) {
+        for (int num = 13; num < 1_000_000; num++) {
             long count = num;
             while (count != 1) {
                 if (count % 2 == 0) {
                     count /= 2;
                     list.add(count);
-                }
-                else {
+                } else {
                     count = (3 * count) + 1;
                     list.add(count);
                 }
             }
 
-            if(list.size() > amount) {
+            if (list.size() > amount) {
                 amount = list.size();
                 result = num;
             }

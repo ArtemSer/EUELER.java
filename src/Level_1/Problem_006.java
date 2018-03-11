@@ -1,4 +1,3 @@
-package Level_1;
 /*
  * Description: The sum of the squares of the first ten natural numbers is 385
  *              The square of the sum of the first ten natural numbers is 3025
@@ -9,17 +8,25 @@ package Level_1;
  *
  * Author:      Sierikov Artem  (https://github.com/ArtemSer)
  */
+package Level_1;
+
 public class Problem_006 {
-    private static int calculateSumOfSquares (int endNumber){
+    private static int calculateSumOfSquares(int endNumber) {
         int result = 0;
-        for (int i = 1; i <= endNumber; i++){ result += Math.pow(i, 2);}
+        for (int i = 1; i <= endNumber; i++) {
+            result += Math.pow(i, 2);
+        }
         return result;
     }
-    private static int calculateSquaresOfSum (int endNumber){
+
+    private static int calculateSquaresOfSum(int endNumber) {
         int result = 0;
-        for (int i = 1; i <= endNumber; i++){ result += i;}
+        for (int i = 1; i <= endNumber; i++) {
+            result += i;
+        }
         return (int) Math.pow(result, 2);
     }
+
     public static void main(String[] args) {
         int end = 100;
         int squareOfSum = calculateSquaresOfSum(end);

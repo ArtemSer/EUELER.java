@@ -1,10 +1,11 @@
-package Level_1;
 /*
  * Description: The prime factors of 13195 are 5, 7, 13 and 29.
  * Mission:     What is the largest prime factor of the number 600851475143?
  *
  * Author:      Sierikov Artem  (https://github.com/ArtemSer)
  */
+package Level_1;
+
 import java.util.ArrayList;
 import java.util.List;
 

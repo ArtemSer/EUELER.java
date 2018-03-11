@@ -1,4 +1,3 @@
-package Level_1;
 /*
  * Description: TThe product of these numbers is 26 × 63 × 78 × 14 = 1788696.
  * Mission:     What is the greatest product of four adjacent numbers in the same
@@ -6,12 +5,14 @@ package Level_1;
  *
  * Author:      Sierikov Artem  (https://github.com/ArtemSer)
  */
+package Level_1;
+
 public class Problem_011 {
     private static long findBiggestProduct(int[][] mass) {
 
         int Product;
         int largest = 0;
-        
+
         //Horizon check
         for (int[] mas : mass)
             for (int j = 0; j < mas.length - 3; j++) {
@@ -20,27 +21,28 @@ public class Problem_011 {
             }
 
         //Vertical check
-        for(int i = 0; i < mass[0].length - 3; i ++)
-            for (int[] mas : mass){
+        for (int i = 0; i < mass[0].length - 3; i++)
+            for (int[] mas : mass) {
                 Product = mas[i] * mas[i + 1] * mas[i + 2] * mas[i + 3];
-                if(Product > largest) largest = Product;
+                if (Product > largest) largest = Product;
             }
 
         // right diagonal
-        for(int i = 0; i < 17; i++)
-            for(int j = 0; j < 17; j++){
+        for (int i = 0; i < 17; i++)
+            for (int j = 0; j < 17; j++) {
                 Product = mass[i][j] * mass[i + 1][j + 1] * mass[i + 2][j + 2] * mass[i + 3][i + 3];
-                if(Product > largest) largest = Product;
+                if (Product > largest) largest = Product;
             }
 
         // left diagonal
-        for(int i = 0; i < mass[0].length - 3; i ++)
-            for(int j = 3; j < mass.length; j ++){
-                Product = mass[i][j] * mass[i + 1][j - 1] * mass[i + 2][j  - 2] * mass[i + 3][j - 3];
-                if(Product > largest) largest = Product;
+        for (int i = 0; i < mass[0].length - 3; i++)
+            for (int j = 3; j < mass.length; j++) {
+                Product = mass[i][j] * mass[i + 1][j - 1] * mass[i + 2][j - 2] * mass[i + 3][j - 3];
+                if (Product > largest) largest = Product;
             }
         return largest;
     }
+
     public static void main(String[] args) {
         int[][] mass = {{8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8},
                 {49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0},

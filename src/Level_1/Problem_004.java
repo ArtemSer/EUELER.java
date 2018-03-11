@@ -1,4 +1,3 @@
-package Level_1;
 /*
  * Description: A palindromic number reads the same both ways.
  *              The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
@@ -6,8 +5,10 @@ package Level_1;
  *
  * Author:      Sierikov Artem  (https://github.com/ArtemSer)
  */
+package Level_1;
+
 public class Problem_004 {
-    private static boolean checkPalindrome (int number){
+    private static boolean checkPalindrome(int number) {
         int reversed = 0, original = number;
 
         while (original > 0) {
@@ -16,6 +17,7 @@ public class Problem_004 {
         }
         return number == reversed;
     }
+
     public static void main(String[] args) {
         int numberOne, numberTwo, result = 0;
 

@@ -1,7 +1,3 @@
-package Level_1;
-
-import java.math.BigInteger;
-
 /*
  * Description: We have 150 50-digit numbers (massive numbers)
 
@@ -9,8 +5,15 @@ import java.math.BigInteger;
  *
  * Author:      Sierikov Artem  (https://github.com/ArtemSer)
  */
+package Level_1;
+
+import java.math.BigInteger;
+
 public class Problem_013 {
-    private static int numberOfDigits() {return  50;}
+    private static int numberOfDigits() {
+        return 50;
+    }
+
     public static void main(String[] args) {
         String numbers = "37107287533902102798797998220837590246510135740250" +
                 "46376937677490009712648124896970078050417018260538" +
@@ -116,12 +119,12 @@ public class Problem_013 {
         long time = System.nanoTime();
         System.out.println(numbers.length());
         BigInteger sum = BigInteger.valueOf(0);
-        for(int i = 0; i < 100; ++i){
-            String str = numbers.substring(i * numberOfDigits(),(i + 1) * numberOfDigits());
+        for (int i = 0; i < 100; ++i) {
+            String str = numbers.substring(i * numberOfDigits(), (i + 1) * numberOfDigits());
             BigInteger tmp = new BigInteger(str);
             sum = sum.add(tmp);
         }
-        String firstTen = String.valueOf(sum).substring(0,10);
+        String firstTen = String.valueOf(sum).substring(0, 10);
         time = System.nanoTime() - time;
         System.out.println("Result: " + firstTen + "\nTime in nanoseconds: " + time);
     }

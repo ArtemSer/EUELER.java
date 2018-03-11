@@ -1,5 +1,3 @@
-package Level_1;
-
 /*
  * Description: A Pythagorean triplet is a set of three natural numbers, a < b < c
  * Mission:     There exists exactly one Pythagorean triplet for which a + b + c = 1000.
@@ -7,6 +5,8 @@ package Level_1;
  *
  * Author:      Sierikov Artem  (https://github.com/ArtemSer)
  */
+package Level_1;
+
 public class Problem_009 {
     private static long calculateTriplet(int number) {
         for (long a = 1; a < number; ++a) {
