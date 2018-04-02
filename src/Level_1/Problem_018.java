@@ -1,5 +1,3 @@
-package Level_1;
-
 /*
  * Description: By starting at the top of the triangle below and moving to adjacent numbers on the row below, the maximum total from top to bottom is 23.
  * 3
@@ -11,6 +9,8 @@ package Level_1;
  *
  * Author:      Sierikov Artem  (https://github.com/ArtemSer)
  */
+package Level_1;
+
 public class Problem_018 {
     public static void main(String[] args) {
         //noinspection OctalInteger
@@ -28,13 +28,13 @@ public class Problem_018 {
                 {53, 71, 44, 65, 25, 43, 91, 52, 97, 51, 14},
                 {70, 11, 33, 28, 77, 73, 17, 78, 39, 68, 17, 57},
                 {91, 71, 52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48},
-                {63, 66, 04, 68, 89, 53, 67, 30,73, 16, 69, 87, 40, 31},
-                {04, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53,60, 04, 23}
+                {63, 66, 04, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31},
+                {04, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 04, 23}
         };
-        for (int i = triangle.length - 1; i > 0; i-- ) {
+        for (int i = triangle.length - 1; i > 0; i--) {
             for (int j = 0; j < triangle[i].length - 1; j++) {
                 triangle[i - 1][j] += Math.max(triangle[i][j], triangle[i][j + 1]);
-                System.out.print(triangle[i - 1][j] +" ");
+                System.out.print(triangle[i - 1][j] + " ");
             }
             System.out.println("");
         }
